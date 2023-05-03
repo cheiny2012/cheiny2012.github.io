@@ -12,8 +12,8 @@
 </head>
 
 <body>
-    <h1>Bienvenido a mi página web</h1> <button
-        onclick="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank')">Ver Video en YouTube</button>
+    <h1>Bienvenido a mi página web</h1> 
+    <button onclick="window.open('https://anilist.co/home', '_blank')">IR A ANILIST</button>
 </body>
 
 </html>
