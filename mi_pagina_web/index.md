@@ -1,10 +1,10 @@
-<!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+      #      background-color: lightblue;
         body {
           background-image: url('giphy.gif'); 
           background-repeat:repeat;
