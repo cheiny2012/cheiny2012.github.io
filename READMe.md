@@ -3,8 +3,9 @@
 <head>
   <style>
     body {
-      background-color: lightblue;
-    }
+      background-image: url('images/giphy.gif'); 
+      background-repeat:repeat;
+    }    
     </style>  
 </head>
 
