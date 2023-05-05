@@ -15,9 +15,7 @@
 <body>
   <h1>Bienvenido a mi página web</h1>
   <button onclick="window.open('https://anilist.co/home', '_blank')">IR A ANILIST</button>
-
-
-   <a href=”https://www.google.com/search?q=Google+tutorial+create+link”>Google tutorial create link</a>
+  <a href=”https://www.google.com/search?q=Google+tutorial+create+link”>Google tutorial create link</a>
 
 
   <tr>
