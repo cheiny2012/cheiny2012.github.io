@@ -11,7 +11,7 @@
 
 <body>
   <button onclick="window.open('https://anilist.co/home', '_blank')">IR A ANILIST</button>
-  <a href=”https://www.google.com/search?q=Google+tutorial+create+link”>Google tutorial create link</a>
+  <a href=”https://www.google.com/search?q=Google+tutorial+create+link”><p>Google tutorial create link</p></a>
 
 
   <tr>
