@@ -1,12 +1,7 @@
 <html lang="es">
 
 <head>
-  <style>
-    body {
-      background-color: lightblue;
 
-    }
-  </style>
 </head>
 
 <body>
