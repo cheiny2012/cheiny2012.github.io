@@ -3,7 +3,7 @@
 <head>
   <style>
     body {
-      background-image: url('images/giphy.gif'); 
+      background-image: url('images/giphy2.gif'); 
       background-repeat:repeat;
     }    
     </style>  
