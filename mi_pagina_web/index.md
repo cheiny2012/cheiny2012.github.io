@@ -6,7 +6,7 @@
     <style>
       #      background-color: lightblue;
         body {
-          background-image: url('giphy.gif'); 
+          background-image: url('images/giphy.gif'); 
           background-repeat:repeat;
         }
         </style>
