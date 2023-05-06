@@ -30,7 +30,7 @@
         }
       });
       		window.addEventListener('load', function() {
-            fetch('https://somoskudasai.com/')
+            fetch('https://cheiny2012.github.io/proxy.php?url=https://somoskudasai.com/')
               .then(response => response.text())
               .then(data => {
                 const parser = new DOMParser();
