@@ -11,7 +11,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        background-color: #f8f8f8;
+        background-color: #171616;
         padding: 10px;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
       }
@@ -29,6 +29,31 @@
           header.classList.remove('scroll');
         }
       });
+      		window.addEventListener('load', function() {
+            fetch('https://somoskudasai.com/')
+              .then(response => response.text())
+              .then(data => {
+                const parser = new DOMParser();
+                const htmlDocument = parser.parseFromString(data, 'text/html');
+                const noticias = htmlDocument.querySelectorAll('article.ar');
+                noticias.forEach(noticia => {
+                  const titulo = noticia.querySelector('h2.ar-title').innerText;
+                  const fecha = noticia.querySelector('div.ar-mt span').innerText;
+                  const imagen = noticia.querySelector('figure.im img').src;
+                  const enlace = noticia.querySelector('a.lnk-blk').href;
+                console.log({titulo, fecha, imagen, enlace});
+                });
+              })
+            .catch(error => console.error(error));
+            // Seleccionar el elemento padre
+            const contenedor = document.getElementById('contenedor');
+            // Crear un nuevo elemento div
+            const noticia = document.createElement('div');
+            // Asignar la clase "noticia" al nuevo elemento
+            noticia.setAttribute('class', 'noticia');
+            // Agregar el nuevo elemento al elemento padre
+            contenedor.appendChild(noticia);
+          });  
     </script>
     
 
@@ -44,8 +69,13 @@
     <div>
       <button onclick="window.open('https://anilist.co/home', '_blank')">IR A ANILIST</button>
       <button onclick="location.href='https://cheiny2012.github.io/mi_pagina_web/index'">IR A LA OTRA PAGINA</button>
-      
     </div>
+    <main>
+      <!-- Aquí va el contenido principal de tu página -->
+      <div id="contenedor">
+        <!-- Aquí es donde se agregarán las noticias dinámicamente -->
+      </div>
+    </main>    
 
 
 
