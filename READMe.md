@@ -15,7 +15,7 @@
         padding: 10px;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
       }
-      img {
+      #logo {
         height: 50px;
         margin-right: 10px;
       }
@@ -36,9 +36,9 @@
 
   <body>
     <header>
-      <a href="https://anilist.co/home"><img src="images/AniList_logo.png" ></a>
-      <a href="https://anilist.co/home"><img src="images/AniList_logo.png" ></a>
-      <a href="https://anilist.co/home"><img src="images/AniList_logo.png" ></a>
+      <a href="https://anilist.co/home"><img src="images/AniList_logo.png" id="logo" ></a>
+      <a href="https://anilist.co/home"><img src="images/AniList_logo.png" id="logo"></a>
+      <a href="https://anilist.co/home"><img src="images/AniList_logo.png" id="logo"></a>
       <a href="https://anilist.co/home"><img src="images/AniList_logo.png" ></a>
     </header>
     <div>
