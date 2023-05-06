@@ -19,9 +19,41 @@
         height: 50px;
         margin-right: 10px;
       }
-      #noticias {
-        background-color:#13236e;
-      }
+#noticias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.noticias-container {
+  display: none;
+  flex-basis: 48%;
+  margin-bottom: 20px;
+}
+.noticia {
+  position: relative;
+}
+.noticia-link {
+  display: block;
+  position: relative;
+}
+.noticia-imagen {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.noticia-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+.noticia-titulo {
+  margin: 0;
+  }
       #imagen_noticia{
         height: 150px;
       }
@@ -60,29 +92,43 @@
           const htmlDocument = parser.parseFromString(data.contents, "text/html");
           const noticias = htmlDocument.querySelectorAll("article.ar");
           const noticiasDiv = document.getElementById("noticias");
-          let  i = 1;
-          noticias.forEach((noticia) => {
-            if (i > 9 && i <30){ 
-            const titulo = noticia.querySelector("h2.ar-title").innerText;
-            const fecha = noticia.querySelector("span.db").innerText;
-            const imagenSrc = noticia.querySelector("figure.im img").src;
-            const enlace = noticia.querySelector("a.lnk-blk").href;
-            const noticiaDiv = document.createElement("div");
-            noticiaDiv.innerHTML = `
-              <h2>${titulo}</h2>
-              <p>${fecha}</p>
-              <a href="${enlace}">
-                <img src="${imagenSrc}" alt="${titulo}" id="imagen_noticia">
-              </a>
-            `;
-            noticiasDiv.appendChild(noticiaDiv);
-          }
-          i++;
-          });
-        })
-        .catch((error) => {
-          console.error(error);
-        });
+    let contador = 0;
+    noticias.forEach((noticia, i) => {
+      if (i >= 9 && i < 30) {
+        if (contador % 2 === 0) {
+          const noticiasContainer = document.createElement("div");
+          noticiasContainer.classList.add("noticias-container");
+          noticiasDiv.appendChild(noticiasContainer);
+        }
+        const titulo = noticia.querySelector("h2.ar-title").innerText;
+        const fecha = noticia.querySelector("span.db").innerText;
+        const imagenSrc = noticia.querySelector("figure.im img").src;
+        const enlace = noticia.querySelector("a.lnk-blk").href;
+        const noticiaDiv = document.createElement("div");
+        noticiaDiv.classList.add("noticia");
+        noticiaDiv.innerHTML = `
+          <a href="${enlace}" class="noticia-link">
+            <img src="${imagenSrc}" alt="${titulo}" class="noticia-imagen">
+            <div class="noticia-info">
+              <h2 class="noticia-titulo">${titulo}</h2>
+              <p class="noticia-fecha">${fecha}</p>
+            </div>
+          </a>
+        `;
+        const noticiasContainer = noticiasDiv.lastChild;
+        noticiasContainer.appendChild(noticiaDiv);
+        contador++;
+        if (contador % 2 === 0) {
+          noticiasContainer.style.display = "flex";
+          noticiasContainer.style.justifyContent = "flex-end";
+        }
+      }
+    });
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
     </script>
 
 
