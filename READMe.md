@@ -69,14 +69,36 @@
     <div>
       <button onclick="window.open('https://anilist.co/home', '_blank')">IR A ANILIST</button>
       <button onclick="location.href='https://cheiny2012.github.io/mi_pagina_web/index'">IR A LA OTRA PAGINA</button>
-    </div>
-    <main>
-      <!-- Aquí va el contenido principal de tu página -->
-      <div id="contenedor">
-        <!-- Aquí es donde se agregarán las noticias dinámicamente -->
-      </div>
-    </main>    
-
+    </div> 
+    <div id="noticias"></div>
+    <script>
+      fetch("https://api.allorigins.win/get?url=https://somoskudasai.com/")
+        .then((response) => response.json())
+        .then((data) => {
+          const parser = new DOMParser();
+          const htmlDocument = parser.parseFromString(data.contents, "text/html");
+          const noticias = htmlDocument.querySelectorAll("article.ar");
+          const noticiasDiv = document.getElementById("noticias");
+          noticias.forEach((noticia) => {
+            const titulo = noticia.querySelector("h2.ar-title").innerText;
+            const fecha = noticia.querySelector("span.db").innerText;
+            const imagenSrc = noticia.querySelector("figure.im img").src;
+            const enlace = noticia.querySelector("a.lnk-blk").href;
+            const noticiaDiv = document.createElement("div");
+            noticiaDiv.innerHTML = `
+              <h2>${titulo}</h2>
+              <p>${fecha}</p>
+              <a href="${enlace}">
+                <img src="${imagenSrc}" alt="${titulo}">
+              </a>
+            `;
+            noticiasDiv.appendChild(noticiaDiv);
+          });
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    </script>
 
 
   </body>
