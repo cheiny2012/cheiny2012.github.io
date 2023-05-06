@@ -6,9 +6,7 @@
         background-image: url('images/giphy2.gif'); 
         background-repeat:repeat;
       }
-      div {
-        background: black;
-      }    
+   
       </style>
     <a href="https://anilist.co/home"><img src="images/AniList_logo.png" alt="Tutorialspoint" style="width:50px;height:60px;"></a>
 
