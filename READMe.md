@@ -57,9 +57,9 @@
           const htmlDocument = parser.parseFromString(data.contents, "text/html");
           const noticias = htmlDocument.querySelectorAll("article.ar");
           const noticiasDiv = document.getElementById("noticias");
-          int i = 0;
+          let  i = 1;
           noticias.forEach((noticia) => {
-            if (i <= 7){ 
+            if (i < 8){ 
             const titulo = noticia.querySelector("h2.ar-title").innerText;
             const fecha = noticia.querySelector("span.db").innerText;
             const imagenSrc = noticia.querySelector("figure.im img").src;
