@@ -57,6 +57,7 @@
           const htmlDocument = parser.parseFromString(data.contents, "text/html");
           const noticias = htmlDocument.querySelectorAll("article.ar");
           const noticiasDiv = document.getElementById("noticias");
+          noticias = Array.from(noticias).slice(7);
           noticias.forEach((noticia) => {
             const titulo = noticia.querySelector("h2.ar-title").innerText;
             const fecha = noticia.querySelector("span.db").innerText;
