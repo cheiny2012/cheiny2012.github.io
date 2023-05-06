@@ -29,31 +29,6 @@
           header.classList.remove('scroll');
         }
       });
-      		window.addEventListener('load', function() {
-            fetch('https://cheiny2012.github.io/proxy.php?url=https://somoskudasai.com/')
-              .then(response => response.text())
-              .then(data => {
-                const parser = new DOMParser();
-                const htmlDocument = parser.parseFromString(data, 'text/html');
-                const noticias = htmlDocument.querySelectorAll('article.ar');
-                noticias.forEach(noticia => {
-                  const titulo = noticia.querySelector('h2.ar-title').innerText;
-                  const fecha = noticia.querySelector('div.ar-mt span').innerText;
-                  const imagen = noticia.querySelector('figure.im img').src;
-                  const enlace = noticia.querySelector('a.lnk-blk').href;
-                console.log({titulo, fecha, imagen, enlace});
-                });
-              })
-            .catch(error => console.error(error));
-            // Seleccionar el elemento padre
-            const contenedor = document.getElementById('contenedor');
-            // Crear un nuevo elemento div
-            const noticia = document.createElement('div');
-            // Asignar la clase "noticia" al nuevo elemento
-            noticia.setAttribute('class', 'noticia');
-            // Agregar el nuevo elemento al elemento padre
-            contenedor.appendChild(noticia);
-          });  
     </script>
     
 
