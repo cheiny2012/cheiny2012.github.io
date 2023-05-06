@@ -14,7 +14,7 @@
 
   <body>
     <header class="site-header site-header-transparent" role="banner">
-      <a href="https://anilist.co/home"><img src="images/AniList_logo.png" alt="Tutorialspoint" style="width:50px;height:60px;"></a>
+
     </header>
     <div>
       <button onclick="window.open('https://anilist.co/home', '_blank')">IR A ANILIST</button>
