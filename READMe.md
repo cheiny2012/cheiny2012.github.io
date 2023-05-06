@@ -59,7 +59,7 @@
           const noticiasDiv = document.getElementById("noticias");
           let  i = 1;
           noticias.forEach((noticia) => {
-            if (i < 8){ 
+            if (i > 9){ 
             const titulo = noticia.querySelector("h2.ar-title").innerText;
             const fecha = noticia.querySelector("span.db").innerText;
             const imagenSrc = noticia.querySelector("figure.im img").src;
