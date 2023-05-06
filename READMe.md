@@ -22,6 +22,9 @@
       #noticias {
         background-color:#13236e;
       }
+      #imagen_noticia{
+        height: 150px;
+      }
       </style>
         <script>
       window.addEventListener('scroll', function() {
@@ -59,7 +62,7 @@
           const noticiasDiv = document.getElementById("noticias");
           let  i = 1;
           noticias.forEach((noticia) => {
-            if (i > 9 && i <29){ 
+            if (i > 9 && i <30){ 
             const titulo = noticia.querySelector("h2.ar-title").innerText;
             const fecha = noticia.querySelector("span.db").innerText;
             const imagenSrc = noticia.querySelector("figure.im img").src;
@@ -69,7 +72,7 @@
               <h2>${titulo}</h2>
               <p>${fecha}</p>
               <a href="${enlace}">
-                <img src="${imagenSrc}" alt="${titulo}">
+                <img src="${imagenSrc}" alt="${titulo}" id="imagen_noticia">
               </a>
             `;
             noticiasDiv.appendChild(noticiaDiv);
