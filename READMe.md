@@ -19,6 +19,9 @@
         height: 50px;
         margin-right: 10px;
       }
+      #noticias {
+        background-color:#171616;
+      }
       </style>
         <script>
       window.addEventListener('scroll', function() {
