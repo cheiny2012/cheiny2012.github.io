@@ -42,7 +42,7 @@
       <a href="https://anilist.co/home"><img src="images/AniList_logo.png" id="logo" ></a>
       <a href="https://anilist.co/home"><img src="images/AniList_logo.png" id="logo"></a>
       <a href="https://anilist.co/home"><img src="images/AniList_logo.png" id="logo"></a>
-      <a href="https://anilist.co/home"><img src="images/AniList_logo.png" ></a>
+      <a href="https://anilist.co/home"><img src="images/AniList_logo.png" id="logo"></a>
     </header>
     <div>
       <button onclick="window.open('https://anilist.co/home', '_blank')">IR A ANILIST</button>
