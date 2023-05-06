@@ -57,8 +57,9 @@
           const htmlDocument = parser.parseFromString(data.contents, "text/html");
           const noticias = htmlDocument.querySelectorAll("article.ar");
           const noticiasDiv = document.getElementById("noticias");
-          noticias = Array.from(noticias).slice(7);
+          int i = 0;
           noticias.forEach((noticia) => {
+            if (i <= 7){ 
             const titulo = noticia.querySelector("h2.ar-title").innerText;
             const fecha = noticia.querySelector("span.db").innerText;
             const imagenSrc = noticia.querySelector("figure.im img").src;
@@ -72,6 +73,8 @@
               </a>
             `;
             noticiasDiv.appendChild(noticiaDiv);
+          }
+          i++;
           });
         })
         .catch((error) => {
