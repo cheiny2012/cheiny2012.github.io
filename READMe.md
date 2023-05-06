@@ -20,7 +20,7 @@
         margin-right: 10px;
       }
       #noticias {
-        background-color:#171616;
+        background-color:#13236e;
       }
       </style>
         <script>
@@ -59,7 +59,7 @@
           const noticiasDiv = document.getElementById("noticias");
           let  i = 1;
           noticias.forEach((noticia) => {
-            if (i > 9){ 
+            if (i > 9 && i <29){ 
             const titulo = noticia.querySelector("h2.ar-title").innerText;
             const fecha = noticia.querySelector("span.db").innerText;
             const imagenSrc = noticia.querySelector("figure.im img").src;
