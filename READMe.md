@@ -6,58 +6,59 @@
         background-image: url('images/giphy2.gif'); 
         background-repeat:repeat;
       }
-      header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: #171616;
-        padding: 10px;
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-      }
-      #logo {
-        height: 50px;
-        margin-right: 10px;
-      }
-#noticias {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  text-align: right;
-}
-.noticias-container {
-  display: none;
-  flex-basis: 48%;
-  margin-bottom: 20px;
-}
-.noticia {
-  position: relative;
-}
-.noticia-link {
-  display: block;
-  position: relative;
-}
-.noticia-imagen {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-.noticia-info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #fff;
-}
-.noticia-titulo {
-  margin: 0;
-  }
-      #imagen_noticia{
-        height: 150px;
-      }
+header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #171616;
+      padding: 10px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    #logo {
+      height: 50px;
+      margin-right: 10px;
+    }
+    #noticias {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: right;
+      background-color: #102382;
+      padding: 5px;
+    }
+    .noticias-container {
+      display: none;
+      flex-basis: 100%; /* Cambiado de 48% a 100% */
+      margin-bottom: 20px;
+    }
+    .noticia {
+      position: relative;
+    }
+    .noticia-link {
+      display: block;
+      position: relative;
+    }
+    .noticia-imagen {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    .noticia-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+    }
+    .noticia-titulo {
+      margin: 0;
+    }
+    #imagen_noticia{
+      height: 100px;
+    }
       </style>
         <script>
       window.addEventListener('scroll', function() {
