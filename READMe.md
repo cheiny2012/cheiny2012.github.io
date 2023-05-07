@@ -25,6 +25,8 @@ header {
       text-align: right;
       background-color: #102382;
       padding: 5px;
+      right: 0;
+      position: fixed;
     }
     .noticias-container {
       display: none;
@@ -96,7 +98,7 @@ header {
           const noticiasDiv = document.getElementById("noticias");
     let contador = 0;
     noticias.forEach((noticia, i) => {
-      if (i >= 9 && i < 30) {
+      if (i >= 9 && i < 15) {
         if (contador % 2 === 0) {
           const noticiasContainer = document.createElement("div");
           noticiasContainer.classList.add("noticias-container");
