@@ -26,7 +26,6 @@ header {
       background-color: #102382;
       padding: 5px;
       right: 0;
-      position: fixed;
     }
     .noticias-container {
       display: none;
@@ -115,7 +114,6 @@ header {
             <img src="${imagenSrc}" alt="${titulo}" class="noticia-imagen">
             <div class="noticia-info">
               <h2 class="noticia-titulo">${titulo}</h2>
-              <p class="noticia-fecha">${fecha}</p>
             </div>
           </a>
         `;
