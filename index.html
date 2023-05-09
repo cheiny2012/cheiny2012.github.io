@@ -126,6 +126,27 @@ header {
           header.classList.remove('scroll');
         }
       });
+
+      <!--
+        pruebas de proxy
+        -->
+      
+      const express = require('express');
+const { createProxyMiddleware } = require('http-proxy-middleware');
+
+const app = express();
+
+app.use('/', createProxyMiddleware({
+    target: 'https://somoskudasai.com',
+    changeOrigin: true,
+    secure: false
+}));
+
+app.listen(process.env.PORT || 3000, () => {
+    console.log('Proxy server listening on port ' + (process.env.PORT || 3000));
+});
+
+
     </script>
   </head>
   <body>
@@ -146,7 +167,8 @@ header {
     </header>
     <div id="noticias"></div>
     <script>
-      fetch("https://api.allorigins.win/get?url=https://somoskudasai.com/")
+      <!-- https://api.allorigins.win/get?url=https://somoskudasai.com/ -->
+      fetch("https://cheiny2012.github.io/cheiny2012.github.io/proxy?url=https://somoskudasai.com/")
         .then((response) => response.json())
         .then((data) => {
           const parser = new DOMParser();
