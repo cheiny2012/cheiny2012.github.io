@@ -1,0 +1,116 @@
+
+      body {
+        background-image: url('images/giphy2.gif'); 
+        background-repeat:repeat;
+      }
+header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #171616;
+      padding: 10px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 9999;
+    }
+    h2 {
+  text-decoration: none;
+}
+    #logo {
+      height: 50px;    
+      margin-right: 10px;
+    }
+    #noticias {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: right;
+      margin-top: 5%;
+      max-width: 30%;
+      float: right;
+      margin-right: 2%;
+    }
+    #barra_busqueda {
+      float: right;
+      margin-top: 5px;
+      margin-bottom: 0px;
+      margin-right: 10px;
+    }
+    .noticias-container {
+      display: none;
+      flex-basis: 100%; /* Cambiado de 48% a 100% */
+      margin-bottom: 5px;
+    }
+    .noticia {
+      position: relative;
+    }
+    .noticia-link {
+      display: block;
+      position: relative;
+      margin-left: 5px;
+    }
+    .noticia-imagen {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    .noticia-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 5px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+    }
+    .noticia-titulo {
+      margin: 0;
+      font-size: 80%;
+    }
+    #imagen_noticia{
+      height: 100px;
+      transition: all 0.3s ease-in-out;
+			filter: brightness(100%);
+    }
+		img:hover {
+			filter: brightness(80%);
+			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+		}
+    .imagen {
+			box-shadow: 3px 3px 3px grey;
+			padding: 10px;
+			border-radius: 5px;
+			transition: all 0.3s ease;
+			display: inline-block;
+		}
+		.imagen:hover {
+			box-shadow: 5px 5px 5px grey;
+			transform: translateY(-5px);
+		}
+		.dialogo {
+			display: none;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 999;
+			background-color: white;
+			box-shadow: 5px 5px 5px grey;
+			border-radius: 5px;
+      margin-top: 40px;
+		}
+		.cerrar {
+			position: absolute;
+			top: 5px;
+			right: 5px;
+			font-size: 20px;
+			cursor: pointer;
+		}
+    #search-input{
+      height: 40px; 
+      width: 1000px;
+      border-radius: 5px;
+      margin-right: 20px;
+      font-size: 25px
+    }
+   
