@@ -169,11 +169,11 @@ app.listen(process.env.PORT || 3000, () => {
     <script>
       <!-- https://api.allorigins.win/get?url=https://somoskudasai.com/ -->
       fetch("https://cheiny2012/cheiny2012.github.io/proxy?url=https://somoskudasai.com/")
-        .then((response) => response.json())
+        .then((response) => response.text())
         .then((data) => {
           const parser = new DOMParser();
           const htmlDocument = parser.parseFromString(data.contents, "text/html");
-          const noticias = htmlDocument.querySelectorAll("article.ar");
+          const noticias = parser.querySelectorAll("article.ar");
           const noticiasDiv = document.getElementById("noticias");
     let contador = 0;
     noticias.forEach((noticia, i) => {
